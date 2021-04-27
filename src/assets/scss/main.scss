@@ -4,10 +4,15 @@ body {
   box-sizing: border-box;
 
   font-family: "Fira-sans", sans-serif;
+  background-color: rgb(16, 16, 16);
+  font-family: "Antonio", sans-serif;
+  background-image: url("/src/img/pexels-daniel-absi-952670.jpg");
+  background-position: center;
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@200&display=swap");
 header {
-  padding-top: 50px;
+  padding-top: 20px;
   padding-bottom: 50px;
 
   h1 {
@@ -17,7 +22,7 @@ header {
     text-align: center;
 
     strong {
-      color: black;
+      color: red;
     }
   }
 }
@@ -31,20 +36,22 @@ header {
   width: 20%;
   display: block;
   margin-left: 10px;
-  margin-top: 30px;
+  margin-top: 10px;
 
   h3 {
     text-align: center;
     line-height: 30px;
+    align-items: center;
     color: whitesmoke;
     transition: ease-in 0.1s;
+    font-size: auto;
   }
 
   div {
-    background-color: rgb(202, 193, 193);
+    background-color: rgb(138, 134, 134);
     border-radius: 10px;
-    height: 30px;
-    width: 200px;
+    height: auto;
+    width: auto;
 
     cursor: pointer;
 
@@ -57,6 +64,72 @@ header {
 
 .main_content_div {
   height: auto;
-  width: auto;
-  background-color: black;
+  width: 100%;
+
+  form {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+
+    input {
+      width: 30%;
+      height: 25px;
+      border-radius: 10px;
+      border: none;
+      color: white;
+      background-color: #aaa;
+      outline: none;
+      padding-left: 20px;
+    }
+
+    input:hover {
+      width: 30%;
+      height: 25px;
+      border-radius: 10px;
+      border: none;
+      color: white;
+      background-color: rgb(135, 129, 129);
+      outline: none;
+      padding-left: 20px;
+    }
+  }
+
+  @keyframes scaleInc {
+    0% {
+      scale: 1;
+    }
+    100% {
+      scale: 1.2;
+    }
+  }
+  .results_div {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    margin: 32px 0px 0px;
+
+    div {
+      flex: 1 1 23.333%;
+      max-width: 50%;
+      padding: 16px 8px;
+      cursor: pointer;
+      transition: ease-in 0.5s;
+      border-radius: 10px;
+      animation: scaleInc 0.4s;
+
+      img {
+        transition: ease-out 0.5s;
+        border-radius: 10px;
+      }
+
+      :hover {
+        z-index: 11;
+        animation: scaleInc 0.5s;
+      }
+
+      h2 {
+        color: white;
+      }
+    }
+  }
 }

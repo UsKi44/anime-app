@@ -1,18 +1,14 @@
 import React from "react";
 
-function Sidebar() {
+function Sidebar({ topAnime }) {
   return (
     <div className="sidebar">
-      <h2>Top Anime</h2>
-      <div>
-        <h3>Attack On Titan</h3>
-      </div>
-      <div>
-        <h3>Haikyuu</h3>
-      </div>
-      <div>
-        <h3>Black Clover</h3>
-      </div>
+      <h2 style={{ color: "white" }}>Top Anime</h2>
+      {topAnime.map((anime) => (
+        <div key={anime.mal_id}>
+          <h3>{anime.title}</h3>
+        </div>
+      ))}
     </div>
   );
 }
